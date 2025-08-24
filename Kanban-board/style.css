@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.board {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.cards-container p:hover{
+    background-color: #e0e0e0;
+}
