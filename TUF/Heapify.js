@@ -56,3 +56,7 @@ class Solution {
 // ind = 5 val = 2;
 let arr = [1, 4, 5, 5, 7, 6];
 //res - 1,4,2,5,7,5
+
+let res = new Solution();
+res.heapify(arr, 5, 2);
+console.log(arr);
