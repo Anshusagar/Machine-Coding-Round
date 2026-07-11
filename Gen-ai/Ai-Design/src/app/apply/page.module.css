@@ -1,0 +1,111 @@
+@keyframes fadeInReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-primary);
+}
+
+.nav {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.logo {
+  font-family: var(--font-playfair);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  animation: fadeInReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.9;
+}
+
+.headline {
+  font-family: var(--font-playfair);
+  color: var(--color-text-primary);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+.subheadline {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+
+.formContainer {
+  width: 100%;
+  background-color: var(--color-surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: var(--spacing-2xl);
+  animation: fadeInReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.15s;
+  opacity: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: var(--spacing-md);
+  }
+  .main {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  .formContainer {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+}

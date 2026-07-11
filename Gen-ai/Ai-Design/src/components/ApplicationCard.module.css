@@ -1,0 +1,102 @@
+.card {
+  background-color: var(--color-surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.header h3 {
+  font-family: var(--font-playfair);
+  color: var(--color-accent-gold);
+  font-size: 1.25rem;
+}
+
+.gender {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.body {
+  flex: 1;
+}
+
+.bio {
+  color: var(--color-text-primary);
+  font-style: italic;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hobbyTag {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  border: 1px solid rgba(212, 178, 84, 0.3);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnReject {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-muted);
+}
+
+.btnReject:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+.btnApprove {
+  background-color: rgba(212, 178, 84, 0.1);
+  border: 1px solid var(--color-accent-gold);
+  color: var(--color-accent-gold);
+}
+
+.btnApprove:hover:not(:disabled) {
+  background-color: var(--color-accent-gold);
+  color: #000;
+}
